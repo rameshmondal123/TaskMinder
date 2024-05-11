@@ -3,10 +3,16 @@ package com.example.taskminder;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +29,7 @@ public class TaskPage extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private RecyclerView tasklist;
 
     public TaskPage() {
         // Required empty public constructor
@@ -59,6 +66,23 @@ public class TaskPage extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_task_page, container, false);
+        View v = inflater.inflate(R.layout.fragment_task_page, container, false);
+
+        tasklist = v.findViewById(R.id.tasklistview);
+        List<TaskModel> tasks = new ArrayList<>();
+
+        for(int i=1; i <=10;i++){
+            TaskModel obj = new TaskModel("This is a simple task", "Hello World this is  a sample direct description  ", new Date());
+            obj.setId(i);
+            tasks.add(obj);
+        }
+        TaskAdapter adapter = new TaskAdapter(getContext(), tasks);
+        tasklist.setLayoutManager(new LinearLayoutManager(getContext()));
+        tasklist.setAdapter(adapter);
+
+
+
+
+        return v;
     }
 }

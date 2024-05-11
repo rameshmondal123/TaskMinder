@@ -13,6 +13,9 @@
         android:theme="@style/Theme.TaskMinder"
         tools:targetApi="31">
         <activity
+            android:name=".AddTaskView"
+            android:exported="false" />
+        <activity
             android:name=".DashboardActivity"
             android:exported="false" />
         <activity
