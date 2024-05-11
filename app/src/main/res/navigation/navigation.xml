@@ -1,0 +1,28 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigations"
+    app:startDestination="@id/homepagefrag">
+
+    <fragment
+        android:id="@+id/homepagefrag"
+        android:name="com.example.taskminder.HomePage"
+        android:label="First Fragment" />
+
+    <fragment
+        android:id="@+id/taskfrag"
+        android:name="com.example.taskminder.TaskPage"
+        android:label="Second Fragment" />
+    <fragment
+        android:id="@+id/calendarfrag"
+        android:name="com.example.taskminder.CalendarPage"
+        android:label="Second Fragment" />
+
+    <fragment
+        android:id="@+id/profilefrag"
+        android:name="com.example.taskminder.ProfilePage"
+        android:label="Second Fragment" />
+
+
+    <!-- Add more fragments as needed -->
+
+</navigation>

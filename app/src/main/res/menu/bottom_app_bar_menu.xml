@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/homepage"
+    android:title="Dashboard"
+    android:icon="@drawable/grid" />
+<item
+    android:id="@+id/taskpage"
+    android:title="Tasks"
+    android:icon="@drawable/clipboard" />
+<item
+    android:id="@+id/calendarpage"
+    android:title="Calendar"
+    android:icon="@drawable/calendar" />
+<item
+    android:id="@+id/profilepage"
+    android:title="profile"
+    android:icon="@drawable/verified" />
+<!-- Add more menu items as needed -->
+</menu>
+
